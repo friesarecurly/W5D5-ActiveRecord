@@ -12,4 +12,13 @@ class Movie < ApplicationRecord
   has_many :actors,
     through: :castings,
     source: :actor
+
+  # def biggest_cast
+  #   Movie
+  #     .select(:id, :title)
+  #     .joins(:actors)
+  #     .group('movies.id')
+  #     .order('COUNT(actors.id) DESC')
+  #     .limit(3)
+  # end
 end

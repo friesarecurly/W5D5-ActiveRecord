@@ -50,7 +50,6 @@ def vanity_projects
     .joins(:actors)
     .where("director_id = actors.id AND castings.ord = 1")
 
-
 end
 
 
@@ -70,8 +69,6 @@ def most_supportive
     .group('actors.id')
     .order('roles desc')
     .limit(2)
-  
-
 end
   # Actor.joins(:castings)
 

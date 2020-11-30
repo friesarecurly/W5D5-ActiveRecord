@@ -1,4 +1,7 @@
+
+
 class Actor < ApplicationRecord
+
   has_many :castings,
     class_name: :Casting,
     foreign_key: :actor_id,
@@ -12,4 +15,5 @@ class Actor < ApplicationRecord
     class_name: :Movie,
     foreign_key: :director_id,
     primary_key: :id
-end
+
+  end
